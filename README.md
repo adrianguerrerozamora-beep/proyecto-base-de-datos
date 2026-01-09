@@ -120,22 +120,22 @@ Al utilizar el cliente oficial de Supabase y ORM, todas las consultas son **para
 ### 1. Página Principal (Cartelera)
 Los usuarios pueden ver los eventos destacados y acceder a la compra de boletos.
 
-![Vista de la Cartelera](./assets/cartelera.png)
+![Vista de la Cartelera](cartelera.png)
 
 ### 2. Compra de Boletos & QR
 Un modal interactivo permite confirmar la compra y entrega el QR al instante.
 
-![Modal de Compra](./assets/compra-de-boletos.png)
+![Modal de Compra](compra_de_boletos.png)
 
 ### 3. Panel de Control (DJ)
 El DJ tiene herramientas para validar QRs y cobrar cover en la misma pantalla.
 
-![Dashboard del DJ](./assets/panel-de-control.png)
+![Dashboard del DJ](.panel_de_control.png)
 
 ### 4. Inicio de Sesión (Login)
 Acceso seguro y diferenciado para Administradores, Artistas y Clientes.
 
-![Pantalla de Login](./assets/login.png)
+![Pantalla de Login](login.png)
 
 ---
 
@@ -174,3 +174,4 @@ Si deseas correr este proyecto en tu máquina local:
 ## 👨‍💻 Autor
 
 Desarrollado por **Adrian Guerrero Zamora** como proyecto final para la materia de Base de Datos.
+
