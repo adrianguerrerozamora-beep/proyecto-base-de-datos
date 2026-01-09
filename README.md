@@ -130,7 +130,7 @@ Un modal interactivo permite confirmar la compra y entrega el QR al instante.
 ### 3. Panel de Control (DJ)
 El DJ tiene herramientas para validar QRs y cobrar cover en la misma pantalla.
 
-![Dashboard del DJ](.panel_de_control.png)
+![Dashboard del DJ](panel_de_control.png)
 
 ### 4. Inicio de Sesión (Login)
 Acceso seguro y diferenciado para Administradores, Artistas y Clientes.
@@ -174,4 +174,5 @@ Si deseas correr este proyecto en tu máquina local:
 ## 👨‍💻 Autor
 
 Desarrollado por **Adrian Guerrero Zamora** como proyecto final para la materia de Base de Datos.
+
 
