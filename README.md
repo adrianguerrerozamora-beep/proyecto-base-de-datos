@@ -1,8 +1,16 @@
 # EventFlow: Sistema de Gestión Integral para DJ
 
-**EventFlow** es una plataforma web full-stack diseñada para la gestión profesional de eventos musicales. Este sistema centraliza la logística, la venta de boletos y el control de acceso en tiempo real, resolviendo la problemática de la información dispersa que enfrentan los DJs independientes.
+> 🚀 **Demo en Vivo:** [https://rodd-todd.vercel.app/](https://rodd-todd.vercel.app/)
 
-La aplicación permite administrar múltiples roles (Admin, Artista, Cliente), gestionar eventos públicos y privados, vender boletos mediante códigos QR únicos y validar el acceso en la puerta utilizando un escáner integrado o registro manual.
+## 💡 Sobre el Proyecto
+
+**EventFlow** nace de la necesidad de **centralizar y profesionalizar la gestión de eventos para DJs independientes**.
+
+Tradicionalmente, la información de clientes, playlists, equipos y contratos se maneja de forma dispersa (hojas de cálculo, notas, mensajes), lo que genera errores logísticos y pérdida de tiempo. Esta plataforma ofrece una solución integral **"Todo en Uno"** que conecta tres roles fundamentales:
+
+1.  **El DJ (Administrador):** Tiene el control total. Publica su cartelera, gestiona eventos privados y controla el acceso en tiempo real (Live Manager).
+2.  **El Cliente (Fan):** Visualiza la cartelera, compra boletos en segundos y recibe un QR único.
+3.  **El Artista Colaborador:** Facilita la expansión del equipo mediante un sistema de solicitudes y aprobación.
 
 ---
 
@@ -58,8 +66,6 @@ El diseño conceptual utiliza **herencia y especialización** para manejar los d
   - `Evento`: Entidad fuerte principal que agrupa toda la logística.
   - `Playlist`: Modelada como entidad débil dependiente del Evento (una playlist no tiene sentido sin un evento asignado).
 
-
-
 ### 2. Modelo Relacional (Implementación Física)
 
 La transformación al modelo relacional resultó en un esquema normalizado que garantiza la integridad referencial y el rendimiento.
@@ -68,8 +74,6 @@ La transformación al modelo relacional resultó en un esquema normalizado que g
 - **Resolución de Relaciones N:M (Muchos a Muchos):**
   - `evento_artista`: Tabla intermedia creada para permitir que múltiples artistas participen en un solo evento y que un artista pueda participar en múltiples eventos a lo largo del tiempo.
   - `playlist_cancion`: Tabla intermedia para gestionar qué canciones pertenecen a qué playlist, permitiendo reutilizar canciones.
-
-
 
 ---
 
@@ -116,17 +120,22 @@ Al utilizar el cliente oficial de Supabase y ORM, todas las consultas son **para
 ### 1. Página Principal (Cartelera)
 Los usuarios pueden ver los eventos destacados y acceder a la compra de boletos.
 
-
+![Vista de la Cartelera](./assets/cartelera.png)
 
 ### 2. Compra de Boletos & QR
 Un modal interactivo permite confirmar la compra y entrega el QR al instante.
 
-
+![Modal de Compra](./assets/compra-de-boletos.png)
 
 ### 3. Panel de Control (DJ)
 El DJ tiene herramientas para validar QRs y cobrar cover en la misma pantalla.
 
+![Dashboard del DJ](./assets/panel-de-control.png)
 
+### 4. Inicio de Sesión (Login)
+Acceso seguro y diferenciado para Administradores, Artistas y Clientes.
+
+![Pantalla de Login](./assets/login.png)
 
 ---
 
@@ -135,19 +144,27 @@ El DJ tiene herramientas para validar QRs y cobrar cover en la misma pantalla.
 Si deseas correr este proyecto en tu máquina local:
 
 1.  **Clonar el repositorio:**
-    git clone 
+    ```bash
+    git clone [https://github.com/TU_USUARIO/eventflow.git](https://github.com/TU_USUARIO/eventflow.git)
     cd eventflow
+    ```
 
 2.  **Instalar dependencias:**
+    ```bash
     npm install
+    ```
 
 3.  **Configurar Variables de Entorno:**
     Crea un archivo `.env.local` en la raíz y agrega tus credenciales de Supabase:
+    ```env
     NEXT_PUBLIC_SUPABASE_URL=tu_url_de_supabase
     NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_clave_anonima
+    ```
 
 4.  **Ejecutar el servidor de desarrollo:**
+    ```bash
     npm run dev
+    ```
 
 5.  **Abrir en el navegador:**
     Visita http://localhost:3000
